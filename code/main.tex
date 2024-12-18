@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+
+\usepackage[letterpaper, top=1.25in, bottom=.75in, left=1in, right=1in, headheight=.5in, headsep=.25in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+% \usepackage{newtx} % Times New Roman font, comment for default Computer Modern
+% \usepackage{parskip} % use for no indent, and vertical gap between paragraph
+
+% Ensure PDF is machine readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% Linespread command allows you to change line spacing for the entire document
+% - 1.3 means 150% spacing
+% - 1.6 means 200% spacing
+\linespread{1.2}
+
+% Constant macros
+\newcommand{\thisDoc}{Statement of Purpose\xspace}
+\newcommand{\myFullName}{Ashish Kulkarni\xspace}
+
+% import school specific macros
+\input{src/school-specifics}
+
+% hyperlink coloring
+\colorlet{LinkColor}{SchoolColorDark} % replace with black for consistency {black}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=LinkColor,
+    filecolor=LinkColor,      
+    urlcolor=LinkColor,
+    citecolor=LinkColor,
+    pdftitle={\myFullName's \thisDoc},
+    pdfpagemode=FullScreen,
+}
+
+% Define header
+\input{src/header}
+
+\begin{document}
+
+% Main content
+\input{src/content}
+
+% Bibliography
+% \input{src/bib}  % usually, SOPs do not require a references section
+
+\end{document}
